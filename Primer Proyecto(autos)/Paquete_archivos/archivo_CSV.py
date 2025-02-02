@@ -1,4 +1,4 @@
-from datos.datos_autos import *
+from Paquete_datos.datos_autos import *
 def generar_csv(path: str, lista_autos: list):
     """Genera un archivo CSV con los datos de los autos
 
