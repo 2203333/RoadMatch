@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultados del Filtro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { 
+      background: #eef; 
+      font-family: Arial, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+    }
+    .container { 
+      max-width: 1000px; 
+      margin: 30px auto; 
+      background: #fff; 
+      padding: 20px; 
+      border-radius: 8px; 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+    }
+    h1 { 
+      text-align: center; 
+      color: #333; 
+    }
+    table { 
+      width: 100%; 
+      border-collapse: collapse; 
+      margin-top: 20px; 
+    }
+    th, td { 
+      padding: 12px; 
+      border: 1px solid #ccc; 
+      text-align: left; 
+    }
+    th { 
+      background-color: #007BFF; 
+      color: #fff; 
+    }
+    .menu-link { 
+      margin: 20px 0; 
+      text-align: center; 
+    }
+    .menu-link a { 
+      text-decoration: none; 
+      color: #007BFF; 
+      font-size: 18px; 
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Resultados del Filtro</h1>
+    {% if autos %}
+      <table>
+        <thead>
+          <tr>
+            <th>Marca</th>
+            <th>Año</th>
+            <th>Modelo</th>
+            <th>Km Mín.</th>
+            <th>Km Máx.</th>
+            <th>Precio</th>
+            <th>Transmisión</th>
+            <th>Uso</th>
+            <th>Consumo</th>
+            <th>Carrocería</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for auto in autos %}
+          <tr>
+            <td>{{ auto.marca }}</td>
+            <td>{{ auto.año }}</td>
+            <td>{{ auto.modelo }}</td>
+            <td>{{ auto.min_km }}</td>
+            <td>{{ auto.max_km }}</td>
+            <td>{{ auto.minimo_precio }}</td>
+            <td>{{ auto.transmicion }}</td>
+            <td>{{ auto.uso }}</td>
+            <td>{{ auto.consumo }}</td>
+            <td>{{ auto.tamaño }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No se encontraron autos que cumplan con el filtro.</p>
+    {% endif %}
+    <div class="menu-link">
+      <a href="/">Volver al Menú Principal</a>
+    </div>
+  </div>
+</body>
+</html>

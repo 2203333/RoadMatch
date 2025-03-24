@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Filtro por Consumo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { background: #fff; font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    .container { max-width: 500px; margin: 50px auto; background: #f8f9fa; padding: 30px;
+                 box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-radius: 8px; }
+    h1 { text-align: center; color: #343a40; }
+    label { display: block; margin: 20px 0 5px; color: #6c757d; font-size: 16px; }
+    select { width: 100%; padding: 10px; font-size: 16px;
+             border: 1px solid #ced4da; border-radius: 4px; }
+    button { width: 100%; padding: 10px; background-color: #007bff; border: none;
+             border-radius: 4px; color: #fff; font-size: 18px; margin-top: 20px;
+             cursor: pointer; transition: background-color 0.3s ease; }
+    button:hover { background-color: #0056b3; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Filtrar por Consumo</h1>
+    <form action="/filtro/consumo" method="GET">
+      <label for="consumo">Selecciona el costo de consumo:</label>
+      <select id="consumo" name="consumo">
+        <option value="muy alto">Muy alto</option>
+        <option value="alto">Alto</option>
+        <option value="medio">Medio</option>
+        <option value="bajo">Bajo</option>
+        <option value="muy bajo">Muy bajo</option>
+      </select>
+      <button type="submit">Filtrar</button>
+    </form>
+  </div>
+</body>
+</html>

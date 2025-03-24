@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menú de Filtros</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    ul.menu {
+      list-style: none;
+      padding: 0;
+    }
+    ul.menu li {
+      margin: 10px 0;
+    }
+    ul.menu li a {
+      display: block;
+      padding: 10px;
+      background-color: #007BFF;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    ul.menu li a:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Menú de Filtros</h1>
+    <ul class="menu">
+      <li><a href="/filtro/marca">Filtrar por Marca</a></li>
+      <li><a href="/filtro/año">Filtrar por Año</a></li>
+      <li><a href="/filtro/presupuesto">Filtrar por Presupuesto</a></li>
+      <li><a href="/filtro/kilometros">Filtrar por Kilómetros</a></li>
+      <li><a href="/filtro/transmicion">Filtrar por Transmisión</a></li>
+      <li><a href="/filtro/uso">Filtrar por Uso</a></li>
+      <li><a href="/filtro/consumo">Filtrar por Consumo</a></li>
+      <li><a href="/filtro/carroceria">Filtrar por Carrocería</a></li>
+      <li><a href="/resultados">Ver Resultados</a></li>
+    </ul>
+  </div>
+</body>
+</html>
